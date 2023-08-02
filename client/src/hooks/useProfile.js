@@ -7,7 +7,7 @@ export const useProfile = () => {
         queryKey: ['user-profile'],
         queryFn: async() => {
             const {data} = await axios.get('/api/get-profile')
-            console.log(data)
+            // console.log(data)
             return data
         },
         onError: (err) => {

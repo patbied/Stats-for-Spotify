@@ -16,7 +16,7 @@ export const AuthProvider = ({children}) => {
                 withCredentials: true
             })
             const isAuth = data.Authenticated
-            console.log('auth',isAuth)
+            // console.log('auth',isAuth)
             if (isAuth) setAuth(true)
             else setAuth(false)
             return isAuth
@@ -33,7 +33,7 @@ export const AuthProvider = ({children}) => {
             
         },
         onSuccess: (data) => {
-            console.log("SUCC",data)
+            // console.log("SUCC",data)
         },
         refetchOnWindowFocus: false
     })

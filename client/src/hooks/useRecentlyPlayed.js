@@ -11,7 +11,7 @@ export const useRecentlyPlayed = () => {
                     limit:'10',
                 }
             })
-            console.log(data)
+            // console.log(data)
             return data
         },
         onError: (err) => {
