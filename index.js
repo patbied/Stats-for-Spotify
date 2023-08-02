@@ -137,13 +137,26 @@ app.get('/callback',async(req,res) => {
                     expires: dayjs().add(30, "days").toDate(),
                 })
                 // return res.redirect(`http://localhost:5173`)
-                return res.redirect(`http://localhost:2137`)
+                if (process.env.NODE_ENV === 'development'){
+                    return res.redirect(`http://localhost:2137`)
+                    
+                } else {
+                    return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com`)
+                    
+                }
+                
             } else {
                 var queryparams = querystring.stringify({
                     error: 'Invalid token.'
                 }) 
               
-                return res.status(200).redirect(`http://localhost:2137/?${queryparams}`)
+                if (process.env.NODE_ENV === 'development'){
+                    return res.redirect(`http://localhost:2137?${queryparams}`)
+                    
+                } else {
+                    return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com?${queryparams}`)
+                    
+                }
             }
         }catch(err){
             console.log(err)
