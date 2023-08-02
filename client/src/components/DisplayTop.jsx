@@ -9,7 +9,7 @@ const DisplayTop = ({time_range,limit,typeReq,idxSkip}) => {
     const {data,isLoading,isError} = useTopTracks({time_range,limit,typeReq})
     useEffect(() => {
         if (data){
-            console.log(data.items)
+            // console.log(data.items)
             setDataChunk(_.chunk(data.items,3))
             // console.log(data)
             // console.log(_.chunk(data.items,3))

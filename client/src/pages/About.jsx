@@ -22,7 +22,7 @@ const About = () => {
     <p>
     Hi, welcome to the about page. My name is Patrick Biedermann,   
     and at the time of writing this I will be a sophmore in Computer Science at the university of South Florida.
-    I created this website to improve my ability to work with React, Express, and API's, especially 3rd party ones. 
+    I created this website using React, Express, and the spotify API. 
     I do not expect this website to go viral, but I hope that atleast someone may use it for fun. If you would like to connect 
     add me on <a className='customAWhite' href="https://www.linkedin.com/in/patcbied/" target='_blank'>LinkedIn</a> or check out my <a className='customAWhite' href="https://github.com/patbied" target='_blank'>GitHub</a> (which may or may not be pretty empty).
     

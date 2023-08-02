@@ -3,9 +3,9 @@ import { Card,ListGroup } from 'react-bootstrap'
 const UserCard = ({data}) => {
   return (
     <Card className='customCard'>
-    {data?.images && (
-        <Card.Img variant="top" src={data?.images[0]} />
-    )}
+    {/* {data?.images && (
+        <Card.Img variant="top" src={data?.images[0].url} rounded/>
+    )} */}
     
     <Card.Body>
       <Card.Title>Welcome to Spotify Stats, {data?.display_name}</Card.Title>

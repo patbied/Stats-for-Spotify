@@ -159,8 +159,15 @@ app.get('/callback',async(req,res) => {
                 }
             }
         }catch(err){
-            console.log(err)
-            return res.json({"erorr":'An error occured during authorization.'})
+            console.log("Err in callback",err)
+            if (process.env.NODE_ENV === 'development'){
+                return res.redirect(`http://localhost:2137`).json({"erorr":'An error occured during authorization.'})
+                
+            } else {
+                return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com?${queryparams}`).json({"erorr":'An error occured during authorization.'})
+                
+            }
+        
         }
         
     }
@@ -217,13 +224,20 @@ app.get('/api/get-recent',isAuthenticated,async(req,res) => {
     // console.log(access_token)
     const {limit} = req.query
     const before = Date.now()
-    const {data} = await axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=${limit}&before=${before}`, {
+    try {
+        const {data} = await axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=${limit}&before=${before}`, {
             headers: {
                 Authorization: `Bearer ${access_token}`
             }
         })
     console.log(data)
     res.json(data)
+    }catch(err){
+        console.log("ERR IN GET RECENT")
+        // console.log(err)
+        return res.json({'error':'An error occured.'})
+    }
+   
 })
 app.post('/api/logout',(req,res) => {
     res.clearCookie("access_token");
@@ -246,8 +260,8 @@ app.get('/api/get-top',isAuthenticated,async(req,res) => {
         // console.log(data)
         res.json(data)
     } catch(err){
-        console.log(err)
-        res.json(err)
+        console.log("Err in get top")
+        return res.json({'error':'An error occured.'})
     }
     
 })
