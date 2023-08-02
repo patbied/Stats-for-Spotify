@@ -242,7 +242,7 @@ app.get('/api/get-top',isAuthenticated,async(req,res) => {
     
 })
 
-app.listen(port, () => {
-    console.log(`App running on  http://localhost:${port}`)
+app.listen(process.env.PORT || port, () => {
+    console.log(`App running on  http://localhost:${process.env.PORT || port}`)
 
 })
