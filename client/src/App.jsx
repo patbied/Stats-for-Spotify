@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home'
-import Root from './pages/root';
+import Root from './pages/Root';
 import TopArtists from './pages/TopArtists'
 import TopTracks from './pages/TopTracks'
 import About from './pages/About';
