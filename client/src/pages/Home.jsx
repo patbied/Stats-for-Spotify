@@ -58,7 +58,7 @@ const Home = () => {
         ): (
             <div className='customDiv'> 
             <p>The website uses cookies to keep you logged in.</p>
-            <a className='customA' href="http://localhost:2137/login"><Button className='btnCustom'>Login</Button></a>
+            <a className='customA' href="api/login"><Button className='btnCustom'>Login</Button></a>
             </div>
         )}
         </>

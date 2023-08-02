@@ -73,7 +73,7 @@ const isAuthenticated = async(req, res, next) => {
     
 }
 
-app.get('/login',(req,res) => {
+app.get('/api/login',(req,res) => {
     var scope = 'user-read-private user-read-email user-library-read playlist-read-private user-follow-read user-top-read user-read-recently-played';
     var state = generateRandomString(16)
     res.cookie(stateKey,state)
