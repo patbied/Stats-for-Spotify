@@ -13,11 +13,8 @@ const cookieParser = require('cookie-parser')
 const path = require('path')
 app.use(cookieParser())
 app.use(cors())
-app.use(express.static(path.join(__dirname + '/public')))
+app.use(express.static(path.join(__dirname + '/client/dist')))
 
-app.get('/', (req, res) => {
-    res.send('Hello')
-})
 
 
 
@@ -242,6 +239,9 @@ app.get('/api/get-top',isAuthenticated,async(req,res) => {
     
 })
 
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/dist/index.html'));
+});
 app.listen(process.env.PORT || port, () => {
     console.log(`App running on  http://localhost:${process.env.PORT || port}`)
 
