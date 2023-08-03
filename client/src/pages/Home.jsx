@@ -50,7 +50,7 @@ const Home = () => {
         (
             <>
         <div className='customDiv'> 
-        <UserCard data={data}/>
+        {/* <UserCard data={data}/> */}
         <h2 className='customh2'>Recently Played Songs</h2>
         <RecentlyPlayed/>
         </div>

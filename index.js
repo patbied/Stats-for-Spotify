@@ -74,7 +74,7 @@ const isAuthenticated = async(req, res, next) => {
 }
 
 app.get('/api/login',(req,res) => {
-    var scope = 'user-read-private user-read-email user-library-read playlist-read-private user-follow-read user-top-read user-read-recently-played';
+    var scope = 'user-library-read playlist-read-private user-follow-read user-top-read user-read-recently-played';
     var state = generateRandomString(16)
     res.cookie(stateKey,state)
 
@@ -233,6 +233,7 @@ app.get('/api/get-recent',isAuthenticated,async(req,res) => {
     console.log(data)
     res.json(data)
     }catch(err){
+        console.log(err)
         console.log("ERR IN GET RECENT")
         // console.log(err)
         return res.json({'error':'An error occured.'})

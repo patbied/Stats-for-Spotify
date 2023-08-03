@@ -6,7 +6,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import logo from '../assets/images/spotify-logo.png'
 const RecentlyPlayedItem = ({data}) => {
     dayjs.extend(relativeTime)
-    // console.log(data)
+    console.log(data)
   return (
     <ListGroup.Item className='customListgroupItem'>
         <Row> 

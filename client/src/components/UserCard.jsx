@@ -8,16 +8,11 @@ const UserCard = ({data}) => {
     )} */}
     
     <Card.Body>
-      <Card.Title>Welcome to Spotify Stats, {data?.display_name}</Card.Title>
+      <Card.Title></Card.Title>
     </Card.Body>
-    <ListGroup className="list-group">
-        <ListGroup.Item className='customListgroupItem'>Country: {data?.country}</ListGroup.Item>
-        <ListGroup.Item className='customListgroupItem'>Email: {data?.email}</ListGroup.Item>
-        <ListGroup.Item className='customListgroupItem'>Followers: {data?.followers?.total}</ListGroup.Item>
-      </ListGroup>
-    {/* <Card.Body>
-      <Card.Link href={data?.href}>Card Link</Card.Link>
-    </Card.Body> */}
+    <Card.Body>
+      <Card.Text> Welcome to Stats for Spotify, {data?.display_name}</Card.Text>
+    </Card.Body>
   </Card>
   )
 }
