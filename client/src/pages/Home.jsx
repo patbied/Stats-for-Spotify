@@ -58,6 +58,8 @@ const Home = () => {
         ): (
             <div className='customDiv'> 
             <p>The website uses cookies to keep you logged in.</p>
+            <p>NOTE: This website is using Spotify's development mode which allows 25 authorized Users to access this website.</p>
+            <p>I am in the progress of obtaining extended features. If you would like to try the application now, please email me at: <a className='customAWhite' href="mailto:spotifystats1@gmail.com">spotifystats1@gmail.com</a></p>
             <a className='customA' href="api/login"><Button className='btnCustom'>Login</Button></a>
             </div>
         )}
