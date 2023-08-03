@@ -6,7 +6,7 @@ import Loader from './Loader'
 const RecentlyPlayed = () => {
     const {data,isLoading,isError,error} = useRecentlyPlayed()
     useEffect(() => {
-      console.log(data)
+      // console.log(data)
     },[data])
     useEffect(() => {
       if (isError){
