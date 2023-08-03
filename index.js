@@ -141,7 +141,7 @@ app.get('/callback',async(req,res) => {
                     return res.redirect(`http://localhost:2137`)
                     
                 } else {
-                    return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com`)
+                    return res.redirect(`https://www.statisticsforspotify.net/`)
                     
                 }
                 
@@ -154,7 +154,7 @@ app.get('/callback',async(req,res) => {
                     return res.redirect(`http://localhost:2137?${queryparams}`)
                     
                 } else {
-                    return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com?${queryparams}`)
+                    return res.redirect(`https://www.statisticsforspotify.net?${queryparams}`)
                     
                 }
             }
@@ -164,7 +164,7 @@ app.get('/callback',async(req,res) => {
                 return res.redirect(`http://localhost:2137`).json({"erorr":'An error occured during authorization.'})
                 
             } else {
-                return res.redirect(`https://statsforspotify1-482aaa25850d.herokuapp.com?${queryparams}`).json({"erorr":'An error occured during authorization.'})
+                return res.redirect(`https://www.statisticsforspotify.net?${queryparams}`).json({"erorr":'An error occured during authorization.'})
                 
             }
         
