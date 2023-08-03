@@ -20,7 +20,7 @@ const About = () => {
    
     <h2 className='customh2'>About</h2>
     <p>
-    Hi, welcome to the about page. My name is Patrick Biedermann,   
+    Hi, welcome to the about page. Before I give a bit of info I want to repeat I am in no way associated with Spotify. My name is Patrick Biedermann,   
     and at the time of writing this I will be a sophmore in Computer Science at the university of South Florida.
     I created this website using React, Express, and the spotify API. 
     I do not expect this website to go viral, but I hope that atleast someone may use it for fun. If you would like to connect 
